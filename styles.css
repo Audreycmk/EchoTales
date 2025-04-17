@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Mina&display=swap');
-
-
 *{
     margin: 0;
     padding: 0;
@@ -9,6 +6,8 @@
 
 body {
     background-image: url("./public/images/phone.png");
+    background-size: cover;  
+    background-position: center;  
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -31,9 +30,11 @@ button{
 .droppables-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns for each big and normal drop area */
+    position: absolute;
+    top:15%;
+    left: 0.1rem;
     gap: 20px;
     width: 50%;
-    margin-top: 3.6rem;
     color: #FFF;
     text-align: center;
     font-variant-numeric: lining-nums tabular-nums;
@@ -58,20 +59,23 @@ button{
     right: 0.1rem;
 }
 
-
 .audio-wrapper{
     position: absolute;
-    top: 500px;
-    right:2.5rem;
+    top: 60%;
+    right: 1.2rem;;
 }
 
 audio{
-    width: 150px;
-    height: 50px;
+    width: 250px;
+    transform-origin: top left; 
+    height: 40px; 
 }
 
 .audio-initial{
     display: none;
+    transform: scale(1.07);
+    transform-origin: top left;
+    width: 250px;
 }
 
 .draggables-container > *{
@@ -80,15 +84,17 @@ audio{
 
 .progress-bar{
     margin: 0;
+    border: 1px solid #807FBF;
+    border-radius: 16px;
     min-width: calc(75vw);
     height: 10px;
     position: absolute;
     top: 4.5rem;
     left: 50%;
     transform: translateX(-50%);
+    border-radius: 100px;
     display: flex;
     gap: 1rem;
-    border-radius: 100px;
     background: rgba(112, 111, 144, 0.60);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.40) inset;
     overflow: hidden;
@@ -133,12 +139,11 @@ audio{
     justify-content: center;
     align-items: center;
     border: 3px dashed #807FBF;
-    border-radius: 10px;
     min-height: 50px;
     width: 50px;
     backdrop-filter: blur(2px);
     background: #1a153568 ;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 10px;   
 }
 
@@ -161,44 +166,44 @@ audio{
 
 /* Highlight Droppable boxes when item is dropped */
 .ui-state-highlight {
-    background-color: #93fcafe0 !important;
+    background-color: lightgreen !important;
 }
 
 /* Button Styling */
 .check-button {
     position: absolute;
     font-family: "Micro 5", sans-serif;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    background: rgba(69, 67, 84, 0.75);
+    border: 1px dashed #a45dff;
+    text-transform: capitalize;
     letter-spacing: 5px;
-    right:2.5rem;
-    top: 680px;
-    color: #A45DFF;
+    color: #a45dff;
     border-radius: 15px;
     font-size: 24px;
-    width: 149px;
-    height: 41px;
-    border-radius: 15px;
-    border: 1px dashed #A45DFF;
-    background: rgba(69, 67, 84, 0.75);
     text-align: center;
+    height:41px;
+    width:149px;
+    right:2.5rem;
+    top:85vh;
 }
 
 h1{
-    font-family: 'Megrim';
+    font-family: Megrim;
     font-weight: 400;
-    color: #B1AFAF;
+    color: white;
     position: absolute;
-    font-size: 26px;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    letter-spacing: 6.5px;
     text-align: center;
+    font-size: 26px;
+    letter-spacing: 6.5px;
 }
 
 .scanner{
-    z-index: -10;
+     z-index: -10;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -210,7 +215,7 @@ h1{
     backdrop-filter: blur(2px);
     color:white;
     right: 1.8rem;
-    top: 106px;
+    top: 6rem;
     width: 8rem;
     height: 13rem;
 }
@@ -218,9 +223,8 @@ h1{
 /* chage here to change card */
 .draggables-container > *{
     width: 90px;
-    height: 130px;
+    height: 150px;
     border-radius: 5px;
-    
 }
 
 video{
@@ -276,21 +280,21 @@ video{
 }
 
 #normal-draggable-1{
-    background-image: url(./public/images/Chapter1/Ch1f1.jpeg);
+    background-image: url(./public/images/Chapter1/ch1f1.jpeg);
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat;
 }
 
 #normal-draggable-2{
-    background-image: url(./public/images/Chapter1/Ch1f2.jpeg);
+    background-image: url(./public/images/Chapter1/ch1f2.jpeg);
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat;
 }
 
 #normal-draggable-3{
-    background-image: url(./public/images/Chapter1/Ch1f3.jpeg);
+    background-image: url(./public/images/Chapter1/ch1f3.jpeg);
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat;
@@ -298,21 +302,21 @@ video{
 
 
 #normal-draggable-4{
-    background-image: url(./public/images/Chapter2/Ch2f1.jpeg);
+    background-image: url(./public/images/Chapter2/ch2f1.jpeg);
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat;
 }
 
 #normal-draggable-5{
-    background-image: url(./public/images/Chapter2/Ch2f2.jpeg);
+    background-image: url(./public/images/Chapter2/ch2f2.jpeg);
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat;
 }
 
 #normal-draggable-6{
-    background-image: url(./public/images/Chapter2/Ch2f3.jpeg);
+    background-image: url(./public/images/Chapter2/ch2f3.jpeg);
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat;
@@ -326,18 +330,19 @@ video{
 }
 
 #normal-draggable-8{
-    background-image: url(./public/images/Chapter3/Ch3f2.jpeg);
+    background-image: url(./public/images/Chapter3/ch3f2.jpeg);
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat;
 }
 
 #normal-draggable-9{
-    background-image: url(./public/images/Chapter3/Ch3f3.jpeg);
+    background-image: url(./public/images/Chapter3/ch3f3.jpeg);
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat;
 }
+
 .switch-camera{
     position: absolute;
     left: 27%;
